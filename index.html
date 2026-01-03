@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статистика TikTok - RunStore</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Шапка */
+        header {
+            background: #2d2d2d;
+            border-bottom: 2px solid #00ff88;
+            padding: 20px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 40px;
+            width: 40px;
+            border-radius: 8px;
+        }
+
+        .logo h1 {
+            color: #00ff88;
+            font-size: 24px;
+        }
+
+        .logo span {
+            color: #cccccc;
+            font-size: 14px;
+        }
+
+        .back-btn {
+            color: #00ff88;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #00ff88;
+            border-radius: 6px;
+        }
+
+        /* Основное */
+        main {
+            padding: 40px 0;
+        }
+
+        .app-detail {
+            background: #2d2d2d;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #363636;
+        }
+
+        .app-header {
+            display: flex;
+            align-items: center;
+            padding: 30px;
+            border-bottom: 1px solid #363636;
+        }
+
+        .app-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 15px;
+            margin-right: 30px;
+            border: 2px solid #363636;
+        }
+
+        .app-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .app-title {
+            color: #00ff88;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .app-meta span {
+            background: #363636;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #cccccc;
+            margin-right: 10px;
+        }
+
+        .platform-tag {
+            color: #00ff88;
+            font-size: 16px;
+        }
+
+        .app-content {
+            padding: 30px;
+        }
+
+        .section-title {
+            color: #00ff88;
+            font-size: 22px;
+            margin: 25px 0 15px 0;
+            border-left: 4px solid #00ff88;
+            padding-left: 15px;
+        }
+
+        .app-description {
+            color: #cccccc;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .app-screenshot {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            border: 1px solid #363636;
+            margin: 15px 0;
+        }
+
+        .android-warning {
+            background: rgba(255, 193, 7, 0.1);
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 20px 0;
+            color: #ffc107;
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(0, 255, 136, 0.05);
+            border-radius: 10px;
+            border: 1px solid #00ff88;
+        }
+
+        .download-btn {
+            background: #00ff88;
+            color: #1e1e1e;
+            padding: 14px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .comments-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: #2d2d2d;
+            border-radius: 10px;
+            border: 1px solid #363636;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">
+                    <img src="/apple-touch-icon.png" alt="RunStore Logo">
+                    <div>
+                        <h1>RunStore</h1>
+                        <span>KentCorp</span>
+                    </div>
+                </a>
+                <a href="/" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Назад
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="app-detail">
+            <div class="app-header">
+                <div class="app-logo">
+                    <img src="/logoTTS.png" alt="TikTok Stats">
+                </div>
+                <div>
+                    <h1 class="app-title">Статистика TikTok</h1>
+                    <div class="app-meta">
+                        <span>Версия: 2.5</span>
+                        <span>Разработчик: KentCorp</span>
+                        <span>Дата: 12.10.2025</span>
+                    </div>
+                    <div class="platform-tag">
+                        <i class="fab fa-android"></i> Android 6.0+
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-content">
+                <h2 class="section-title">Описание</h2>
+                <p class="app-description">
+                    Статистика TikTok — приложение для анализа активности в TikTok.
+                </p>
+
+                <div class="android-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Для установки APK разрешите установку из неизвестных источников.
+                </div>
+
+                <h2 class="section-title">Скриншот</h2>
+                <img src="/fotoprogramSTT1.png" alt="Скриншот" class="app-screenshot">
+
+                <div class="download-section">
+                    <h2 class="section-title" style="border:none; text-align:center;">Скачать</h2>
+                    <p style="text-align:center; color:#ccc; margin-bottom:15px;">
+                        Версия 2.5 • 5 MB • Android
+                    </p>
+                    <a href="https://github.com/kentrugithud/3tiktakStativyhy/releases/download/2.5/app-release.apk" 
+                       class="download-btn" download>
+                        <i class="fas fa-download"></i> Скачать APK
+                    </a>
+                </div>
+
+                <div class="comments-section">
+                    <h2 class="section-title">Комментарии</h2>
+                    <script async src="https://telegram.org/js/telegram-widget.js?22" 
+                            data-telegram-discussion="kentotzub/6" 
+                            data-comments-limit="5"
+                            data-color="00FF88"
+                            data-dark="1">
+                    </script>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">RunStore • KentCorp</div>
+            <p class="copyright">
+                © 2026 RunStore. Все права защищены.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
