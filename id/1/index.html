@@ -2,15 +2,8 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PrankMasterPRO - RunStore</title>
-    
-    <!-- PWA Meta Tags -->
-    <meta name="theme-color" content="#00ff88">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="PrankMasterPRO">
-    
     <style>
         * {
             margin: 0;
@@ -24,41 +17,26 @@
             color: #ffffff;
             min-height: 100vh;
             line-height: 1.6;
-            -webkit-text-size-adjust: 100%;
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 0 15px;
-            width: 100%;
+            padding: 0 20px;
         }
 
         /* Шапка */
         header {
             background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
             border-bottom: 2px solid #00ff88;
-            padding: 15px 0;
+            padding: 20px 0;
             box-shadow: 0 4px 20px rgba(0, 255, 136, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
         }
 
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex: 1;
-            min-width: 0;
         }
 
         .logo {
@@ -67,51 +45,32 @@
             gap: 10px;
             text-decoration: none;
             color: inherit;
-            min-width: 0;
         }
 
         .logo img {
             height: 40px;
             width: 40px;
             border-radius: 8px;
-            flex-shrink: 0;
         }
 
-        .logo-text {
-            min-width: 0;
-        }
-
-        .logo-text h1 {
+        .logo h1 {
             color: #00ff88;
-            font-size: 20px;
+            font-size: 24px;
             font-weight: 800;
-            letter-spacing: 0.5px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
-        .logo-text span {
+        .logo span {
             color: #cccccc;
-            font-size: 12px;
-            font-weight: 300;
+            font-size: 14px;
         }
 
-        /* Кнопка назад */
         .back-btn {
             color: #00ff88;
             text-decoration: none;
-            font-size: 14px;
-            padding: 8px 15px;
+            padding: 8px 16px;
             border: 1px solid #00ff88;
             border-radius: 6px;
-            transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: none;
-            white-space: nowrap;
-            flex-shrink: 0;
+            font-size: 14px;
         }
 
         .back-btn:hover {
@@ -119,15 +78,14 @@
             color: #1e1e1e;
         }
 
-        /* Основной контент */
+        /* Основное */
         main {
-            padding: 30px 0;
-            min-height: calc(100vh - 200px);
+            padding: 40px 0;
         }
 
         .app-detail {
             background: #2d2d2d;
-            border-radius: 12px;
+            border-radius: 15px;
             overflow: hidden;
             border: 1px solid #363636;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -136,24 +94,17 @@
         .app-header {
             display: flex;
             align-items: center;
-            padding: 20px;
+            padding: 30px;
             background: rgba(0, 255, 136, 0.05);
             border-bottom: 1px solid #363636;
-            flex-wrap: wrap;
-            gap: 15px;
         }
 
         .app-logo {
-            width: 80px;
-            height: 80px;
-            border-radius: 12px;
-            overflow: hidden;
+            width: 100px;
+            height: 100px;
+            border-radius: 15px;
+            margin-right: 30px;
             border: 2px solid #363636;
-            background: #1e1e1e;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
         }
 
         .app-logo img {
@@ -162,58 +113,41 @@
             object-fit: cover;
         }
 
-        .app-info {
-            flex: 1;
-            min-width: 200px;
-        }
-
         .app-title {
             color: #00ff88;
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .app-meta {
-            display: flex;
-            gap: 10px;
-            color: #cccccc;
-            font-size: 13px;
-            margin-bottom: 8px;
-            flex-wrap: wrap;
+            font-size: 28px;
+            margin-bottom: 10px;
         }
 
         .app-meta span {
             background: #363636;
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 4px;
-            white-space: nowrap;
+            font-size: 14px;
+            color: #cccccc;
+            margin-right: 10px;
         }
 
         .platform-tag {
             color: #00ff88;
-            font-size: 14px;
-            font-weight: 600;
+            font-size: 16px;
         }
 
-        /* Содержимое */
         .app-content {
-            padding: 20px;
+            padding: 30px;
         }
 
         .section-title {
             color: #00ff88;
-            font-size: 20px;
-            margin: 25px 0 12px 0;
+            font-size: 22px;
+            margin: 25px 0 15px;
             border-left: 4px solid #00ff88;
-            padding-left: 12px;
-            font-weight: 600;
+            padding-left: 15px;
         }
 
         .app-description {
             color: #cccccc;
             line-height: 1.7;
-            font-size: 15px;
             margin-bottom: 15px;
         }
 
@@ -223,11 +157,8 @@
             border-radius: 10px;
             border: 1px solid #363636;
             margin: 15px 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            display: block;
         }
 
-        /* Кнопка скачивания */
         .download-section {
             text-align: center;
             margin: 30px 0;
@@ -238,28 +169,21 @@
         }
 
         .download-btn {
-            background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+            background: #00ff88;
             color: #1e1e1e;
             padding: 14px 30px;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 700;
+            font-weight: bold;
             font-size: 16px;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+            display: inline-block;
             margin-top: 15px;
         }
 
         .download-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 255, 136, 0.4);
+            background: #00cc6a;
         }
 
-        /* Комментарии */
         .comments-section {
             margin-top: 30px;
             padding: 20px;
@@ -268,179 +192,51 @@
             border: 1px solid #363636;
         }
 
-        /* Футер */
         footer {
             background: #2d2d2d;
             padding: 25px 0;
-            margin-top: 40px;
             border-top: 2px solid #00ff88;
-        }
-
-        .footer-content {
             text-align: center;
-            color: #cccccc;
         }
 
         .footer-logo {
             color: #00ff88;
             font-size: 18px;
-            font-weight: 700;
             margin-bottom: 10px;
         }
 
         .copyright {
-            font-size: 13px;
-            opacity: 0.8;
-            line-height: 1.5;
-        }
-
-        /* Медиа-запросы для мобильных */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 12px;
-            }
-            
-            header {
-                padding: 12px 0;
-            }
-            
-            .logo-text h1 {
-                font-size: 18px;
-            }
-            
-            .back-btn {
-                font-size: 13px;
-                padding: 6px 12px;
-            }
-            
-            .app-header {
-                padding: 15px;
-                flex-direction: column;
-                align-items: flex-start;
-                text-align: center;
-            }
-            
-            .app-logo {
-                width: 70px;
-                height: 70px;
-                margin: 0 auto;
-            }
-            
-            .app-info {
-                text-align: center;
-                width: 100%;
-            }
-            
-            .app-title {
-                font-size: 20px;
-                text-align: center;
-            }
-            
-            .app-meta {
-                justify-content: center;
-            }
-            
-            .app-content {
-                padding: 15px;
-            }
-            
-            .section-title {
-                font-size: 18px;
-                margin: 20px 0 10px 0;
-            }
-            
-            .app-description {
-                font-size: 14px;
-            }
-            
-            .download-btn {
-                padding: 12px 25px;
-                font-size: 15px;
-            }
-            
-            .download-section {
-                padding: 15px;
-                margin: 20px 0;
-            }
-            
-            .comments-section {
-                padding: 15px;
-                margin-top: 20px;
-            }
-            
-            footer {
-                padding: 20px 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header-content {
-                flex-direction: column;
-                align-items: stretch;
-                gap: 10px;
-            }
-            
-            .logo {
-                justify-content: center;
-            }
-            
-            .back-btn {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .app-meta {
-                flex-direction: column;
-                align-items: center;
-                gap: 5px;
-            }
-            
-            .app-meta span {
-                width: fit-content;
-            }
-            
-            .download-btn {
-                width: 100%;
-                justify-content: center;
-                padding: 12px;
-            }
+            font-size: 14px;
+            color: #cccccc;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Apple Touch Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://github.com/runstoreru/runstoreru.github.io/blob/main/apple-touch-icon.png?raw=true">
-    <link rel="icon" type="image/png" sizes="96x96" href="https://github.com/runstoreru/runstoreru.github.io/blob/main/favicon-96x96.png?raw=true">
 </head>
 <body>
-    <!-- Шапка -->
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo-section">
-                    <a href="/" class="logo">
-                        <img src="https://github.com/runstoreru/runstoreru.github.io/blob/main/apple-touch-icon.png?raw=true" alt="RunStore Logo">
-                        <div class="logo-text">
-                            <h1>RunStore</h1>
-                            <span>KentCorp</span>
-                        </div>
-                    </a>
-                </div>
+                <a href="/" class="logo">
+                    <img src="/apple-touch-icon.png" alt="RunStore">
+                    <div>
+                        <h1>RunStore</h1>
+                        <span>KentCorp</span>
+                    </div>
+                </a>
                 <a href="/" class="back-btn">
-                    <i class="fas fa-arrow-left"></i> Назад в магазин
+                    <i class="fas fa-arrow-left"></i> Назад
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Основное содержимое -->
     <main class="container">
         <div class="app-detail">
             <div class="app-header">
                 <div class="app-logo">
-                    <img src="https://github.com/runstoreru/runstoreru.github.io/blob/main/logoPMS.png?raw=true" alt="PrankMasterPRO Logo">
+                    <img src="/logoPMS.png" alt="PrankMasterPRO">
                 </div>
-                <div class="app-info">
+                <div>
                     <h1 class="app-title">PrankMasterPRO</h1>
                     <div class="app-meta">
                         <span>Версия: 1.4.5</span>
@@ -448,7 +244,7 @@
                         <span>Дата: 25.09.2025</span>
                     </div>
                     <div class="platform-tag">
-                        <i class="fab fa-windows"></i> Для Windows 10/11
+                        <i class="fab fa-windows"></i> Windows 10/11
                     </div>
                 </div>
             </div>
@@ -456,32 +252,25 @@
             <div class="app-content">
                 <h2 class="section-title">Описание</h2>
                 <p class="app-description">
-                    PrankMasterPRO — программа для пранков друзей. Выбирай тип пранка, настрой и создай бат-файл. Когда друг откроет файл, произойдёт пранк. Можно поменять ярлык, например, на Steam или Chrome.
+                    PrankMasterPRO — программа для пранков друзей. Выбирай тип пранка, настрой и создай бат-файл. Когда друг откроет файл, произойдёт пранк.
                 </p>
 
                 <h2 class="section-title">Скриншот</h2>
-                <img src="https://github.com/runstoreru/runstoreru.github.io/blob/main/fotoprogramPMS1.png?raw=true" 
-                     alt="Скриншот PrankMasterPRO" class="app-screenshot">
+                <img src="/fotoprogramPMS1.png" alt="Скриншот" class="app-screenshot">
 
                 <div class="download-section">
-                    <h2 class="section-title" style="border: none; text-align: center;">Скачать</h2>
-                    <p class="app-description" style="text-align: center;">
+                    <h2 class="section-title" style="border:none; text-align:center;">Скачать PrankMasterPRO</h2>
+                    <p style="text-align:center; color:#ccc; margin-bottom:15px;">
                         Версия 1.4.5 • 11 MB • Windows 10/11
                     </p>
                     <a href="https://github.com/kentrugithud/Pranker/releases/download/1.4.5/PrankMaster_Setup.exe" 
                        class="download-btn" download>
                         <i class="fas fa-download"></i> Скачать установщик
                     </a>
-                    <p style="color: #888; margin-top: 12px; font-size: 13px;">
-                        <i class="fas fa-shield-alt"></i> Проверено на вирусы • Безопасно
-                    </p>
                 </div>
 
                 <div class="comments-section">
                     <h2 class="section-title">Комментарии</h2>
-                    <p class="app-description">
-                        Обсуждение:
-                    </p>
                     <script async src="https://telegram.org/js/telegram-widget.js?22" 
                             data-telegram-discussion="kentotzub/5" 
                             data-comments-limit="5"
@@ -493,16 +282,13 @@
         </div>
     </main>
 
-    <!-- Футер -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">RunStore • KentCorp</div>
-                <p class="copyright">
-                    © 2026 RunStore. Все права защищены.<br>
-                    Все приложения проверены на безопасность.
-                </p>
-            </div>
+            <div class="footer-logo">RunStore • KentCorp</div>
+            <p class="copyright">
+                © 2026 RunStore. Все права защищены.<br>
+                Все приложения проверены на безопасность.
+            </p>
         </div>
     </footer>
 </body>
