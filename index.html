@@ -70,35 +70,6 @@
             font-weight: 300;
         }
 
-        /* Правая часть шапки */
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .developer {
-            text-align: right;
-        }
-
-        .developer a, .custom-button {
-            color: #00ff88;
-            text-decoration: none;
-            font-size: 16px;
-            padding: 8px 16px;
-            border: 1px solid #00ff88;
-            border-radius: 6px;
-            transition: all 0.3s;
-            display: inline-block;
-            cursor: pointer;
-            background: none;
-        }
-
-        .developer a:hover, .custom-button:hover {
-            background-color: #00ff88;
-            color: #1e1e1e;
-        }
-
         /* Основной контент */
         main {
             padding: 40px 0;
@@ -320,19 +291,7 @@
             }
             
             .header-content {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
-            
-            .header-right {
-                flex-direction: column;
-                width: 100%;
-            }
-            
-            .developer, .custom-button {
-                width: 100%;
-                text-align: center;
+                justify-content: center;
             }
             
             .section-title {
@@ -389,6 +348,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </header>
 
     <!-- Основное содержимое -->
     <main class="container">
@@ -466,13 +428,5 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        // Если пользователь на мобильном, показать предупреждение
-        if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-            // Можно добавить мобильные функции
-        }
-    </script>
 </body>
 </html>
-
